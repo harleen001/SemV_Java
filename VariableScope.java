@@ -1,8 +1,6 @@
 public class VariableScope {
     static int staticVar = 100;
-
     int instanceVar = 200;
-
     void myMethod() {
         int localVar = 300;
         if (true) {
@@ -11,13 +9,10 @@ public class VariableScope {
         }
         System.out.println("Inside method: localVar = " + localVar);
     }
-
     public static void main(String[] args) {
         VariableScope obj = new VariableScope();
         obj.myMethod();
-
         System.out.println("Static variable: staticVar = " + VariableScope.staticVar);
-
         System.out.println("Instance variable: instanceVar = " + obj.instanceVar);
     }
 }
